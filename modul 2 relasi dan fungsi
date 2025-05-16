@@ -1,0 +1,95 @@
+A.	Materi praktikum:
+1.	Relasi dan Fungsi
+•	Relasi
+Relasi adalah hubungan antara anggota dua himpunan.
+Jika ada dua himpunan, misalnya:
+Himpunan A = {1, 2, 3}
+Himpunan B = {a, b, c}
+Maka relasi dari A ke B adalah pasangan berurutan (x, y) di mana x ∈ A dan y ∈ B.
+Contoh relasi:
+R = {(1, a), (2, b), (3, c)}
+•	Fungsi
+Fungsi adalah relasi khusus dari himpunan A ke B, di mana setiap anggota A berpasangan dengan tepat satu anggota B.
+Contoh fungsi f dari A ke B: f = {(1, a), (2, b), (3, c)}
+Ini disebut fungsi karena setiap elemen di A hanya berpasangan dengan satu elemen di B.
+
+2. Invers Fungsi (Fungsi Invers)
+Jika sebuah fungsi f: A → B satu-satu dan onto (bijektif), maka fungsi tersebut memiliki invers, yaitu f⁻¹: B → A.
+Sifat fungsi invers:
+f(f⁻¹(x)) = x
+f⁻¹(f(x)) = x
+Contoh:
+Misalkan f(x) = 2x + 3
+Untuk mencari inversnya:
+1. Ubah f(x) menjadi y:
+y = 2x + 3
+2. Tukar x dan y:
+x = 2y + 3
+3. Selesaikan untuk y:
+y = (x - 3)/2
+Jadi, f⁻¹(x) = (x - 3)/2
+
+
+
+3. Komposisi Fungsi
+Komposisi fungsi adalah penggabungan dua fungsi: jika f: A → B dan g: B → C, maka komposisi g ∘ f didefinisikan sebagai:
+(g ∘ f)(x) = g(f(x))
+Contoh:
+Jika f(x) = x + 2 dan g(x) = 3x, maka:
+(g ∘ f)(x) = g(f(x)) = g(x + 2) = 3(x + 2) = 3×+6
+
+4.library pendukung implementasi pada python
+A.  Math :
+- Library math dalam Python menyediakan fungsi-fungsi matematika dasar seperti sin, cos, tan, log, exp, dan lainnya.
+- Digunakan untuk operasi matematika yang lebih umum dan tidak memerlukan manipulasi array atau vektor.
+ 	 - Contoh penggunaan:
+    	 Python
+     	import math
+    	angle = math.pi / 4
+   	 sine_value = math.sin(angle)
+   	 - Numpy:
+- Library numpy menyediakan array yang sangatibel dan berbagai fungsi untuk    melakukan operasi pada array tersebut.
+   -	 Sangat berguna untuk komputasi numerik yang melibatkan array besar.
+  	 - Contoh penggunaan:
+  	  python
+  	  import numpy as np
+  	  angle = np.pi / 4
+    	sine_values = np.sin(angle)
+    
+
+Kapan Menggunakan Math dan Kapan Menggunakan Numpy Khususnya pada Kasus Trigonometri:
+- Gunakan math ketika Anda bekerja dengan sudut dalam radian dan membutuhkan fungsi trigonometri dasar.
+- Gunakan numpy ketika Anda bekerja dengan array besar atau memerlukan operasi pada sejumlah besar titik data.
+B.Numpy
+Perbedaan utama antara math dan numpy adalah:
+- math dirancang untuk operasi matematika pada nilai tunggal, sedangkan numpy dirancang untuk operasi matematika pada array dan matriks.
+- numpy menyediakan fungsi-fungsi yang lebih canggih dan fleksibel untuk melakukan operasi matematika pada data yang besar dan kompleks.
+•	Numpy untuk Menyusun domain fungsi
+- np.linspace:
+-Menghasilkan array dengan nilai yang berada dalam rentang tertentu dengan jumlah elemen yang ditentukan.
+-Berguna untuk membuat domain yang merata.
+-Contoh:
+ Python
+x = np.linspace(0, 10, 5
+ print(x)  # Output: [0. 2.5 5. ]
+  	  - np.arange:
+  - Menghasilkan array dengan nilai yang berada dalam rentang tertentu.
+  - Nilai yang dihasilkan adalah bilangan bulat.
+
+  C.  Python
+  	  x = np.arange(0, 10, 2)
+   	 print(x)  # Output: [0 2 4 6 8]
+•	perbedaan antara np.linspace dan np.arange:
+- np.linspace menghasilkan nilai yang merata dalam rentang, sedangkan np.arange menghasilkan bilangan bulat dalam rentang.
+- np.linspace memungkinkan untuk menentukan jumlah elemen, sedangkan np.arange secara otomatis menghasilkan elemen berdasarkan langkahentukan.
+c) Matplotlib
+- Matplotlib:
+ 	- Library untuk membuat grafik dan visualisasi data dalam Python.
+- Memungkinkan untuk membuat berbagai jenis plot seperti plot garis, plot titik, plot batang, dan lainnya.
+  - Contoh penggunaan:
+  	  python
+   	 import matplotlib.pyplot as plt
+   	 x = np.linspace(0, 10, 100)
+    	y = np.sin(x)
+   	 plt.plot(x, y)
+   	 plt.show()
